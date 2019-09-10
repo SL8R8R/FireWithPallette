@@ -43,6 +43,8 @@ CRGB leds[NUM_LEDS];
 
 CRGBPalette16 gPal;
 
+//CRGBPalette256 gPal;
+
 void setup() {
   delay(3000); // sanity delay
   FastLED.addLeds<CHIPSET, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS).setCorrection( TypicalLEDStrip );
@@ -57,10 +59,12 @@ void setup() {
   //   gPal = CRGBPalette16( CRGB::Black, CRGB::Red, CRGB::Yellow, CRGB::White);
   
   // Second, this palette is like the heat colors, but blue/aqua instead of red/yellow
-//  gPal = CRGBPalette16( CRGB::Black, CRGB::DarkViolet, CRGB::HotPink, CRGB::PapayaWhip );
+  gPal = CRGBPalette16( CRGB::Black, CRGB::DarkViolet, CRGB::DodgerBlue, CRGB::HotPink );
   
   // Third, here's a simpler, three-step gradient, from black to red to white
-  gPal = CRGBPalette16( CRGB::Black, 0x00BFFF );
+  //gPal = CRGBPalette16( CRGB::Black, CRGB::DarkMagenta, CRGB::Magenta, CRGB::Plum);//0x00BFFF, 0xFFD700, 0xFFFFFF );
+  //gPal = CRGBPalette256( CRGB::Black, CRGB::DarkMagenta, CRGB::Magenta, CRGB::Plum );//0x00BFFF, 0xFFD700, 0xFFFFFF );
+
 
 }
 
